@@ -19,12 +19,17 @@ apply plugin: 'io.spring.dependency-management'
 group 'com.aws.holonium'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 1.8
+
 repositories {
     mavenCentral()
     jcenter()
 }
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
+    compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
